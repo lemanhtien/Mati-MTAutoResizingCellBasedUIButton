@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestCell.h"
+#import "ReszingCell.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,14 +35,29 @@
 }
 
 #pragma mark - UITableViewDatasource and Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 5;
+    }
     return 5;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestCell" forIndexPath:indexPath];
-    [self configureCell:cell forRowAtIndexPath:indexPath];
-    return cell;
+    if (indexPath.section == 0) {
+        TestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestCell" forIndexPath:indexPath];
+        [self configureCell:cell forRowAtIndexPath:indexPath];
+        return cell;
+    }else{
+        ReszingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResizingCell" forIndexPath:indexPath];
+        cell.lblContent.text = @"This cell uses UITableViewAutomaticDimension. You can combine 2 way to get autoresizing height. This cell uses UITableViewAutomaticDimension. You can combine 2 way to get autoresizing height. This cell uses UITableViewAutomaticDimension. You can combine 2 way to get autoresizing height.";
+        return cell;
+    }
 }
 
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath: (NSIndexPath *)indexPath{
@@ -54,14 +70,18 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
-    //
-    self.prototypeCell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
-    [self.prototypeCell setNeedsLayout];
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height +1;
-    
+    if (indexPath.section == 0) {
+        [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
+        //
+        self.prototypeCell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
+        [self.prototypeCell setNeedsLayout];
+        [self.prototypeCell layoutIfNeeded];
+        CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        return size.height +1;
+        
+    }else{
+        return UITableViewAutomaticDimension;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -44,6 +44,31 @@
                                             <outlet property="btnTest" destination="gA4-Hr-m3n" id="jWY-1A-8YP"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResizingCell" rowHeight="50" id="OR5-Ro-j7d" customClass="ReszingCell">
+                                        <rect key="frame" x="0.0" y="142" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OR5-Ro-j7d" id="mAz-sE-TjB">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="369-Wu-jSt">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="41.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="369-Wu-jSt" secondAttribute="leading" id="3Xc-z8-4WW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="369-Wu-jSt" secondAttribute="bottom" id="6YE-41-Zsr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="369-Wu-jSt" secondAttribute="trailing" id="mwL-Eh-zGq"/>
+                                                <constraint firstItem="369-Wu-jSt" firstAttribute="top" secondItem="mAz-sE-TjB" secondAttribute="topMargin" constant="-8" id="oak-ss-e5k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblContent" destination="369-Wu-jSt" id="vfn-JG-pt8"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

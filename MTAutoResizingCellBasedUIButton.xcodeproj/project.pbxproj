@@ -15,6 +15,7 @@
 		F31243511CDEDD8C001C0653 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F312434E1CDEDD8C001C0653 /* TestCell.m */; };
 		F31243521CDEDD8C001C0653 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F31243501CDEDD8C001C0653 /* CustomButton.m */; };
 		F31243541CDEDDBA001C0653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31243531CDEDDBA001C0653 /* Main.storyboard */; };
+		F3672EB41CE088A000247CEF /* ReszingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3672EB31CE088A000247CEF /* ReszingCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		F312434F1CDEDD8C001C0653 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		F31243501CDEDD8C001C0653 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		F31243531CDEDDBA001C0653 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F3672EB21CE088A000247CEF /* ReszingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReszingCell.h; sourceTree = "<group>"; };
+		F3672EB31CE088A000247CEF /* ReszingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReszingCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				F31243421CDEDD74001C0653 /* Assets.xcassets */,
 				F31243441CDEDD74001C0653 /* LaunchScreen.storyboard */,
 				F31243471CDEDD74001C0653 /* Info.plist */,
+				F3672EB21CE088A000247CEF /* ReszingCell.h */,
+				F3672EB31CE088A000247CEF /* ReszingCell.m */,
 				F31243361CDEDD74001C0653 /* Supporting Files */,
 			);
 			path = MTAutoResizingCellBasedUIButton;
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3672EB41CE088A000247CEF /* ReszingCell.m in Sources */,
 				F312433E1CDEDD74001C0653 /* ViewController.m in Sources */,
 				F31243521CDEDD8C001C0653 /* CustomButton.m in Sources */,
 				F31243511CDEDD8C001C0653 /* TestCell.m in Sources */,
@@ -302,6 +308,7 @@
 				F312434C1CDEDD74001C0653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
